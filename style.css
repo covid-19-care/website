@@ -1,0 +1,350 @@
+$ease: all .6s cubic-bezier(0.23, 1, 0.32, 1);
+
+.logo {
+  position: fixed;
+  top: 1.2vh;
+  left: 1.1vw;
+  z-index: 2;
+
+  
+  
+  img {
+    width: 65px;
+    transition: $ease;
+    transform: rotate(1);
+  
+    &:hover {
+      transform: rotate(360deg) scale(1.4);
+    }
+  }
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv {
+  max-width: 100%;
+  height: 800px;
+  background-color:#0084B0;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+    a{text-decoration:none}
+    .corona-india{width:100%;padding:7px 0;background:#000;margin-bottom:0;border-radius:0 10px 10px 10px;}
+    .columns{display:flex}
+    .virus-logo{max-width:262px;width:100%;height:150px;float:left}
+    .virus-logo img{top:0;position:absolute;z-index:0}
+    .corona-col{flex:0 0 50%;max-width:50%}
+    .corona-india .corona-col:nth-child(3){border-right:0}
+    .corona-col .height-100{height:100%;display:flex;flex-direction:column;justify-content:center}
+    .cases-count{display:flex;padding:11px 0;align-items:center}
+    .cases-count .total-cases,.cases-count .recovered-cases,.cases-count .death-cases{display:flex;flex-direction:column;align-items:center;flex-grow:1}
+    .cases-count h5{font-size:18px;line-height:normal;margin:0;font-family:'Cambay',sans-serif;color:#fff;text-transform:uppercase;font-weight:500}
+    .cases-count h1{font-family:'Roboto',sans-serif;font-size:62px;line-height:66px}
+    .cases-count .total-cases h1{color:#e3b410}
+    .cases-count .recovered-cases h1{color:#25ad00}
+    .cases-count .death-cases h1{color:#d51e20}
+    .state-count .marquee{white-space:nowrap;margin-top:5px;display:flex;flex-direction:row;flex-wrap:nowrap}
+    .state-count .marquee .marqueeInner{display:flex}
+    .state-count .marquee .marqueeInner div{background:rgba(34,34,34,0.5);border:1px solid #565656;margin:0 7px;float:left;border-radius:7px;height:38px;padding:3px 15px}
+    .state-count .marquee span.name{font-family:'Cambay',sans-serif;text-align:center;color:#fff;font-size:17px;margin-right:12px;text-transform:uppercase;margin-bottom:0}
+    .state-count .marquee span.number{font-family:'Cambay',sans-serif;text-align:center;color:#e3b410;font-size:21px;margin-bottom:0;font-weight:600}
+    @keyframes marquee{0%{left:0}
+    100%{left:-100%}
+    }
+    .logo{border-right:1px solid #4c4c4c}
+    .corona-logo{margin-top:8px;margin-right:15px;float:right}
+    .helpline{text-align:center;padding-top:10px;padding-bottom:10px}
+    .helpline span{color:white;display:inline-block;padding:0 15px}
+    .helpline p{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;display:inline;color:rgba(255,255,255,0.85)}
+    .helpline p a{color:#e3b410}
+    .helpline p a[href^="tel:"]{font-weight:600;color:white}
+    p.update-info{color:#777;text-align:center;font-size:12px;font-family:'Cambay',sans-serif;padding:5px;}
+    .day-date{display:flex;justify-content:space-between;flex-direction:row;align-items:center;}
+    .day-date h4{font-family:'Cambay',sans-serif;background:#da3c3f;color:#fff;width:226px;text-align:center;padding:5px 0;font-size:16px;line-height:normal;border-radius:10px 10px 0 0;text-transform:uppercase;font-weight:600;}
+    .helpline{text-align:center;padding-top:10px;padding-bottom:10px;}
+    sup{font-size:10px;}
+    .lockdown-day{font-size:17px;}
+    @media(max-width:768px){.virus-logo{display:none}
+    .cases-count h5{font-size:14px}
+    .cases-count h1{font-size:36px;line-height:42px}
+    .state-count div h5{font-size:12px}
+    .state-count div h1{font-size:26px}
+    .corona-logo{width:87%}
+    .helpline{padding:8px}
+    .helpline p{font-size:12px;font-size:3.2vw;display:block;margin-bottom:4px}
+    .helpline span{display:none}
+    }
+    .mob-show{display:none}
+    @media(max-width:480px){.corona-india{display:block;float:left;padding:10px 0 0;box-shadow:non;border-radius:0;}
+    .day-date h4{text-transform:capitalize;font-weight:500;border-right:1px solid;border-color:rgba(255,255,255,0.4);border-radius:10px 0 0 0;width:50%;padding:0;margin:5px 0 0;font-size:14px;}
+    .lockdown-day{font-size:19px;}
+    .day-date{background:#da3c3f;border-radius:10px 10px 0 0;margin:0 15px;}
+    p.update-info{color:#fff;width:50%;font-size:9px;padding:0;    margin-top: 5px;}
+    .corona-logo{width:90%;margin-left:7px;margin-right:0;float:left}
+    .logo{max-width:41%;flex:0 0 41%;float:left}
+    .cases-count{padding:0}
+    .cases-count h5{font-size:11px}
+    .cases-count h1{font-size:28px;line-height:28px}
+    .corona-col:nth-child(2){max-width:59%;flex:0 0 59%;width:59%;float:left;border:0}
+    .state-count{background:#222;margin-top:12px;height:50px}
+    .state-count .marquee div.marqueeInner div{background:transparent;border:0;border-right:1px solid #565656;margin:5px 7px;float:left;border-radius:0;height:38px;padding:3px 15px;display:flex;flex-direction:column-reverse;align-items:center;justify-content:center}
+    .state-count .marquee span.name{font-size:12px;margin-right:0}
+    .state-count .marquee span.number{font-size:20px;height:25px}
+    .state-count .marquee{margin-top:0}
+    .corona-india .corona-col:nth-child(3){border-right:0;width:100%;flex:0 0 100%;max-width:100%;overflow-x:auto;background:#eee;margin-top:10px;float:left;padding:0}
+    .update-info.mob-show{display:block}
+    }
+    @media(min-width:768px){.virus-logo{max-width:30%;position:relative}
+    .virus-logo img{width:100%}
+    .corona-logo{position:relative;max-width:65% !important;}
+    }
+    @media (max-width:480px){
+      body{min-height:217px;}
+      .day-date{min-height:36px;}
+      .columns {display: flex;min-height: 52px;}
+    }
+    .topicUrl{display:block; overflow:hidden;}
+
+body{
+  background:#111;margin:0;padding:0
+	canvas {background:#000;display:block;cursor: none}
+  overflow: auto;
+  background: linear-gradient(to bottom, #e2e2e2, #ffffff);
+  font-family:Tahoma;
+  font-size:15px;
+}
+
+/* Headers Style */
+h1{
+  text-align:center;
+  font-size:5em;
+  color:#fff;
+  text-shadow: 0px 1px 2px #000;
+}
+
+h2{
+  text-align:left;
+  font-size:3em;
+  color:#007E30;
+  margin-left:120px;
+  margin-bottom:-5px;
+  
+}
+
+h3{
+  text-align:left;
+  font-size:2em;
+  color:#fff;
+  background:#007E30;
+  padding-left:120px;
+  
+}
+
+/* Image top of the menu */
+.TopImage{
+  position:relative;
+  left:110px;
+  z-index:2;
+  width:300px;
+  margin-bottom:-2px;
+}
+
+/* Text boxes style */
+.messagebox{
+  width:80%;
+  height:200px;
+  background-color:white;
+  position:relative;
+  left:120px;
+  line-height: 1.5em;
+  padding:25px;
+  margin-bottom: 50px;
+  border-left:5px solid #007E30;
+}
+
+/* Text boxes style in hover */
+.messagebox:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* Default shadow style */
+.shadow{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+
+/* CoronaVirus Animation
+Default speed is: 10s
+MoveUpDown is a keyFrames that define the position*/
+.animatediv{
+  animation: MoveUpDown 10s linear infinite;
+  position: left;
+  down: 300px;
+  }
+/* position of corona animation */
+@keyframes MoveUpDown {
+  0%, 100% {
+    top: 180px;
+  }
+  50% {
+    top: 350px;
+  }
+}
+
+
+/*Main Menu Style*/
+	ul.menu {
+		position:top;
+    left:120px;
+		background:#fff;
+		width:300px;
+    z-index:3;
+		margin:0px;
+		padding:0px;
+		list-style: none;
+		overflow:hidden;
+	}
+
+.menu li a {
+		width:300px;
+		padding-left:15px;
+		height:40px;
+		line-height:40px;
+		display:block;
+		overflow:hidden;
+		position:relative;
+		text-decoration:none;
+		font-size:15px;
+		color:#686868;			
+	}
+
+	.menu li a:hover {
+		background:#efefef;
+    border-left:5px solid #007E30;
+	}
+
+/*Table Container Style*/
+#TblCon{
+  background:#efefef;
+}
+
+/*Table Style*/
+.Tbl{
+width:70%;
+margin-left: auto;
+margin-right: auto;
+text-align:center;
+font-size:10px;  
+}
+
+/* Final Tite (Wash Your Hands) */
+#WashHandsTxt{
+   color:lightgrey;
+   font-size:8em;
+   text-align:center;
+}
+
+
+/*.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecf0f1;
+  padding: 12px;
+  overflow-x: hidden;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 8px;
+  max-width: 650px;
+
+  &:before {
+    background-color: #e67e22;
+    border-radius: 20px;
+    content: "";
+    opacity: 0.8;
+    position: absolute;
+    bottom: -25px;
+    right: -25px;
+    height: 150px;
+    width: 540px;
+    z-index: -1;
+    transition: 0.5s all;
+  }
+
+  &:hover:before {
+    height: 220px;
+    width: 600px;
+  }
+
+  h2 {
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    margin-top: 1rem;
+  }
+  p {
+    margin-top: 12px;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
+    .fab,
+    .fas {
+      margin-right: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 8px 30px;
+      background-color: red;
+      color: #fff;
+      border-radius: 5px;
+      margin: 4px;
+      transition: 0.3s all;
+
+      &:nth-of-type(1) {
+        background-color: #e74c3c;
+      }
+      &:nth-of-type(2) {
+        background-color: #3498db;
+      }
+      &:nth-of-type(3) {
+        background-color: #0abde3;
+      }
+      &:nth-of-type(4) {
+        background-color: #ee5a24;
+      }
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+    }
+    
+  }
+}
+
+
